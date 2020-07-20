@@ -25,6 +25,8 @@ namespace Poc_Cache
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddMemoryCache();
+            services.AddCacheServices(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +45,8 @@ namespace Poc_Cache
             {
                 endpoints.MapControllers();
             });
+
+            
         }
     }
 }
