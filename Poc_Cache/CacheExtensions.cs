@@ -15,7 +15,7 @@ namespace Poc_Cache
 
             services.Configure<CacheOptions>(config =>
             {
-                config.SlidingExpiration = cacheOptions.SlidingExpiration;
+                config.Expiration = cacheOptions.Expiration;
             });
         }
     }

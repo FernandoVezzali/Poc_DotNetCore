@@ -4,6 +4,6 @@ namespace Poc_Cache
 {
     public class CacheOptions
     {
-        public int SlidingExpiration { get; set; }
+        public int Expiration { get; set; }
     }
 }

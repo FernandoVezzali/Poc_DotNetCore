@@ -18,12 +18,10 @@ namespace Poc_Cache.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
-        private readonly IMemoryCache _memoryCache;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IMemoryCache memoryCache)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
-            _memoryCache = memoryCache;
         }
 
         [FlushCache]
@@ -45,6 +43,8 @@ namespace Poc_Cache.Controllers
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             }).ToArray());
+
+
         }
     }
 }
